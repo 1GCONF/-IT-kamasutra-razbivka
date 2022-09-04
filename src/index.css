@@ -1,13 +1,77 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html li {
+  list-style-type: none;
 }
+html a {
+  text-decoration: none;
+}
+html code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+html body .main {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(13, 15, 17, 0.368627451);
+  color: white;
+}
+html body .main > * {
+  background-color: rgba(17, 18, 21, 0.2);
+}
+html body .main .section_profile {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 100px 1fr 1fr 1fr;
+  grid-template-columns: 1fr 4fr;
+  gap: 0px;
+}
+html body .main .section_profile > .header, html body .main .section_profile > .footer {
+  grid-column: 1/4;
+}
+html body .main .section_profile > .nav, html body .main .section_profile > .article_profile_content {
+  grid-row: 2/4;
+}
+html body .main .section_profile .header {
+  padding: 0 15px;
+  display: grid;
+  align-items: center;
+  background-color: #282c34;
+}
+html body .main .section_profile .header #header-logo {
+  width: 100px;
+  height: 75%;
+}
+html body .main .section_profile .nav {
+  grid-column: 1/2;
+  padding: 15px;
+  background-color: rgba(22, 0, 77, 0.774);
+}
+html body .main .section_profile .nav ul.user-ul li.user-li {
+  text-align: center;
+  padding: 1ch;
+  margin: 2.5ex;
+  box-shadow: 0 2px 5px #05c;
+  cursor: pointer;
+}
+html body .main .section_profile .nav ul.user-ul li.user-li a.user-a {
+  width: 100%;
+  text-transform: capitalize;
+  color: rgb(101, 5, 227);
+  font-weight: 600;
+  font-size: 1.7rem;
+  text-shadow: 2px 3px 7px #00295c;
+}
+html body .main .section_profile .article_profile_content {
+  grid-column: 2/4;
+  background-color: green;
+}
+html body .main .section_profile .footer {
+  background-color: #282c34;
+}
+
+/*# sourceMappingURL=index.css.map */
