@@ -1,93 +1,97 @@
 @mixin center_flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-$padding_header:0 15px;
-$padding_nav:15px;
+$padding_header: 0;
+$padding_nav: 15px;
+$height_header: 55px;
+$height_footer:125px;
 html {
-    li{
-        list-style-type: none;
-    }
-    a{
-        text-decoration: none;
-    }
+  li {
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
   body {
-    .main{
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-          "Helvetica Neue", sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        background-color: #0d0f115e;
-        color: white;
-        & > * {
-          background-color: #11121533;
+    .main {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #0d0f115e;
+      color: white;
+      & > * {
+        background-color: #11121533;
+      }
+      .section_profile {
+        min-height: 100vh;
+        display: grid;
+
+        grid-template-rows: $height_header 1fr $height_footer;
+        grid-template-columns: 1fr 4fr;
+
+        gap: 0px;
+        .header {
+          grid-column: 1/3;
+          padding: $padding_header;
+          display: grid;
+          align-items: center;
+          max-height: 100px;
+          #header-logo {
+            width: 12vw;
+            max-height: $height_header;
+          }
+          background-color: #282c34;
         }
-        .section_profile{
-            min-height: 100vh;
-            display: grid; 
-    
-            grid-template-rows: 100px 1fr 1fr 1fr;
-            grid-template-columns: 1fr 4fr;
-            
-            gap: 0px;
-            &>.header,&>.footer{
-                grid-column: 1/4;
+        .nav {
+          grid-column: 1/2;
+          padding: $padding_nav;
+          background-color: rgba(22, 0, 77, 0.774);
+          ul.nav-ul {
+            li.nav-item {
+              text-align: center;
+              padding: 1ch;
+              margin: 2.5ex;
+              box-shadow: 0 2px 5px #05c;
+              cursor: pointer;
+              a.user-a {
+                width: 100%;
+                text-transform: capitalize;
+                color: rgb(101, 5, 227);
+                font-weight: 600;
+                font-size: 1.7rem;
+                text-shadow: 2px 3px 7px #00295c;
+              }
             }
-            &>.nav,&>.article_profile_content{
-                grid-row: 2/4;
-            }
-            .header {
-                padding: $padding_header;
-                display: grid;
-                align-items: center;
-                #header-logo{
-                    width: 100px;
-                    height: 75%;
-                }
-              background-color: #282c34;
-            }
-            .nav{
-                grid-column: 1/2;
-                padding: $padding_nav;
-                background-color: rgba(22, 0, 77, 0.774);
-                ul.user-ul{
-                    li.user-li{
-                        text-align: center;
-                        padding: 1ch;
-                        margin: 2.5ex;
-                        box-shadow: 0 2px 5px #05c;
-                        cursor: pointer;
-                        a.user-a{
-                            width: 100%;
-                            text-transform: capitalize;
-                            color: rgb(101, 5, 227);
-                            font-weight: 600;
-                            font-size: 1.7rem;
-                            text-shadow: 2px 3px 7px #00295c;
-                        }
-                    }
-                }
-            }
-            .article_profile_content{
-                grid-column: 2/4;
-                background-color: green;
-            }
-            .footer {
-              background-color: #282c34;
-            }
+          }
         }
+        .article_profile_content {
+          grid-column: 2/4;
+          background-color: green;
+        }
+        .footer {
+          grid-column: 1/3;
+
+          display: grid;
+          align-items: center;
+          text-align: center;
+
+          background-color: #282c34;
+        }
+      }
     }
   }
 }

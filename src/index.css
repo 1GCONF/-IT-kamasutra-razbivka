@@ -26,39 +26,35 @@ html body .main > * {
 html body .main .section_profile {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 100px 1fr 1fr 1fr;
+  grid-template-rows: 55px 1fr 125px;
   grid-template-columns: 1fr 4fr;
   gap: 0px;
 }
-html body .main .section_profile > .header, html body .main .section_profile > .footer {
-  grid-column: 1/4;
-}
-html body .main .section_profile > .nav, html body .main .section_profile > .article_profile_content {
-  grid-row: 2/4;
-}
 html body .main .section_profile .header {
-  padding: 0 15px;
+  grid-column: 1/3;
+  padding: 0;
   display: grid;
   align-items: center;
+  max-height: 100px;
   background-color: #282c34;
 }
 html body .main .section_profile .header #header-logo {
-  width: 100px;
-  height: 75%;
+  width: 12vw;
+  max-height: 55px;
 }
 html body .main .section_profile .nav {
   grid-column: 1/2;
   padding: 15px;
   background-color: rgba(22, 0, 77, 0.774);
 }
-html body .main .section_profile .nav ul.user-ul li.user-li {
+html body .main .section_profile .nav ul.nav-ul li.nav-item {
   text-align: center;
   padding: 1ch;
   margin: 2.5ex;
   box-shadow: 0 2px 5px #05c;
   cursor: pointer;
 }
-html body .main .section_profile .nav ul.user-ul li.user-li a.user-a {
+html body .main .section_profile .nav ul.nav-ul li.nav-item a.user-a {
   width: 100%;
   text-transform: capitalize;
   color: rgb(101, 5, 227);
@@ -71,6 +67,10 @@ html body .main .section_profile .article_profile_content {
   background-color: green;
 }
 html body .main .section_profile .footer {
+  grid-column: 1/3;
+  display: grid;
+  align-items: center;
+  text-align: center;
   background-color: #282c34;
 }
 
