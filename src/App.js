@@ -1,15 +1,17 @@
 
-import Nav from "./comp/Nav";
 import Content from "./comp/Content";
-import Footer from "./comp/Footer";
 import StyledHeader from "./comp/Header/StyledHeader";
+import StyledNav from "./comp/StyledNav";
+import StyledFooter from "./comp/StyledFooter";
+import StyledPost from "./comp/Post";
 function App() {
   return (
     <section className="section_profile">
       <StyledHeader/>
-      <Nav />
+      <StyledNav />
       <Content/>
-      <Footer/>
+      <StyledPost></StyledPost>
+      <StyledFooter/>
     </section>
   );
 }

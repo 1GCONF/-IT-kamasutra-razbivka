@@ -1,8 +1,14 @@
 import React from "react";
 import Navitem from "./Navitem";
-export default function Nav() {
+import styled from "styled-components";
+const Nav = styled.nav`
+  display:grid;
+  align-content:start;
+  background:#1a1c22;
+`;
+export default function StyledNav() {
   return (
-    <nav className="nav">
+    <Nav className="nav">
       <ul className="nav-ul">
         <Navitem name='profile'/>
         <Navitem name='messages'/>
@@ -10,6 +16,6 @@ export default function Nav() {
         <Navitem name='music'/>
         <Navitem name='settings'/>
       </ul>
-    </nav>
+    </Nav>
   );
 }
