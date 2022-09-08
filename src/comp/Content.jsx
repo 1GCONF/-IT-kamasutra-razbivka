@@ -11,6 +11,8 @@ const Article = styled.article`
   gap: 15px;
 
   background-color: #282c34;
+  border-radius:25px;
+  box-shadow -0 2px 1px rgba(0, 0, 0, 0.1);
 `;
 const ImgFeed = styled.img`
   grid-column: 1/5;
@@ -27,7 +29,7 @@ const Avatar = styled.img`
   justify-self: center;
   border: 2px solid white;
   border-radius: 50%;
-
+  transform:translateY(-50%)
 `;
 const ProfileInfo = styled.div`
   grid-column: 2/4;
