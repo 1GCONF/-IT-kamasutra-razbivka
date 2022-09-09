@@ -20,7 +20,7 @@ const ImgFeed = styled.img`
   max-height: 300px;
   border-radius 25px;
 `;
-const Avatar = styled.img`
+const Avatar = styled.img`  
   grid-column: 1/2;
 
   width: 150px;
@@ -29,7 +29,7 @@ const Avatar = styled.img`
   justify-self: center;
   border: 2px solid white;
   border-radius: 50%;
-  transform:translateY(-50%)
+  transform: translateY(-50%);
 `;
 const ProfileInfo = styled.div`
   grid-column: 2/4;
@@ -40,11 +40,11 @@ const ProfileInfo = styled.div`
   color: white;
   text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.173);
   display: grid;
-  align-content:space-between;
+  align-content: space-between;
 `;
 
 const A = styled.a`
-  color:white;
+  color: white;
 `;
 export default function Content() {
   return (

@@ -55,7 +55,7 @@ html {
           "navbar navbar content content "
           "navbar navbar post post "
           "footer footer footer footer ";
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
         grid-gap:1ex;
         .header {
           grid-area: header;
