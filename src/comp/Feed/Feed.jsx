@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import StyledPost from "./StyledPost";
 const Ul = styled.ul`
-  //  display grid; 
+   display grid; 
    border-radius:25px;
    background-color: #282c34;
    border-radius:25px;

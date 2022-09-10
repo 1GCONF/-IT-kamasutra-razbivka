@@ -1,15 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 const Article = styled.article` 
-  // grid-column 2/6;
   width 100%;
   height: 100%;
-  // display: grid;
+  display: grid;
 
-  // grid-template-rows:1fr .5fr;
-  // grid-template-columns repeat(auto-fill,minmax(200px,1fr));
-
-
+  grid-template-rows:1fr .5fr;
+  grid-template-columns repeat(auto-fill,minmax(200px,1fr));
+  
   gap: 15px;
 
   background-color: #282c34;
@@ -25,7 +23,7 @@ const ImgFeed = styled.img`
   max-height: 300px;
   border-radius 25px;
 `;
-const Avatar = styled.img`  
+const Avatar = styled.img`
   // grid-column: 1/2;
 
   width: 150px;

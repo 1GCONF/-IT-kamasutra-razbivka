@@ -4,6 +4,6 @@ export const StyledSection = styled.section`
   margin: 0 auto;
   min-height: 100vh;
   display: grid;
-   
+   grid-template-columns repeat(auto-fill,minmax(300px,1fr));
   grid-gap: 1ex;
 `;
