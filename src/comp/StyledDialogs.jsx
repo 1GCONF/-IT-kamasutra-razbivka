@@ -1,7 +1,6 @@
 import styled from "styled-components"
 const StyledDialogs = styled.article`
 
-  grid-column 2/6;
   background-color: #282c34;
   border-radius:25px;
   box-shadow -0 2px 1px rgba(0, 0, 0, 0.1);

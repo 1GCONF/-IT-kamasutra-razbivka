@@ -44,46 +44,32 @@ html {
       -moz-osx-font-smoothing: grayscale;
       background-color: rgba(0, 0, 9, 0.876);
       .section_profile {
-        max-width: 1300px;
 
-        margin: 0 auto;
-        min-height: 100vh;
-        display: grid;
-
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-gap: 1ex;
         .header {
-          grid-area: header;
-          grid-column: 1/6;
+   
           #header-logo {
             //
           }
         }
         .nav {
-          grid-column: 1/2;
+
           ul.nav-ul {
-            display: grid;
-            justify-content: center;
-            transform: perspective(500px) skewY(10deg);
+
             li.nav-item {
-
               a.user-a {
-
               }
             }
           }
         }
         .article_profile_content {
-          grid-column: 2/6;
         }
         .posts {
-          grid-column: 2/6;
+      
         }
-        .dialogs{
-
+        .dialogs {
         }
         .footer {
-          grid-column: 1/6;
+     
           display: grid;
           align-items: center;
           text-align: center;

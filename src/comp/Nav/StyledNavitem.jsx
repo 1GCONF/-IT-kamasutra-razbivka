@@ -4,9 +4,9 @@ const NavItem = styled.li`
   justify-self: start;
   width: 100%;
   transform: perspective(50px) rotateY(10deg);
-  box-shadow: 0 4px 0 $shadow_outside;
+  box-shadow: 0 4px 0 #121212c5;
   text-align: center;
-  // padding: 1ch;
+  padding: 1ch;
   margin: 2.5ex;
   border: 1px solid rgba(0, 0, 0, 0.352);
   border-radius: 50%;
@@ -14,7 +14,7 @@ const NavItem = styled.li`
   &:hover,
   &:focus {
     transform: perspective(50px) rotateY(10deg) translate(-0, 4px);
-    box-shadow: 0 0 0 $shadow_inside;
+    box-shadow: 0 0 0 rgba(0, 0, 1, 0);
   }
   /* ff 3.6+ */
   background:-moz-linear-gradient(90deg, rgba(190, 10, 25, 0.85) 0%, rgba(100, 0, 0, 0.96) 100%); 
@@ -36,7 +36,6 @@ const NavItem = styled.li`
 `;
 const A = styled.a`
 padding: 3ex;
-width: 100%;
 text-transform: capitalize;
 color: rgb(176, 156, 203);
 font-weight: 600;
@@ -46,7 +45,7 @@ text-shadow: 2px 3px 7px #00295c;
 export default function Navitem(props) {
   return (
     <NavItem className="nav-item">
-      <A className="user-a" href="./">
+      <A className="user-a" href={"/"+props.name}>
         {props.name}
       </A>
     </NavItem>

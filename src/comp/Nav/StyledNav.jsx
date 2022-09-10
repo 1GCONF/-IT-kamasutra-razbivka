@@ -10,18 +10,23 @@ const Nav = styled.nav`
   background-color: rgba(0, 0, 9, 0.876);
   background transparent;
   boder-radius:50%;
-  width 100%;
+`;
+
+const Ul = styled.ul`
+  display: grid;
+  justify-content: center;
+  transform: perspective(500px) skewY(10deg);
 `;
 export default function StyledNav() {
   return (
     <Nav className="nav">
-      <ul className="nav-ul">
-        <Navitem name='profile'/>
-        <Navitem name='messages'/>
-        <Navitem name='news'/>
-        <Navitem name='music'/>
-        <Navitem name='settings'/>
-      </ul>
+      <Ul className="nav-ul">
+        <Navitem name="profile" />
+        <Navitem name="messages" />
+        <Navitem name="news" />
+        <Navitem name="music" />
+        <Navitem name="settings" />
+      </Ul>
     </Nav>
   );
 }

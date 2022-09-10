@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 const Article = styled.article` 
-
+  // grid-column 2/6;
+  width 100%;
   height: 100%;
-  display: grid;
+  // display: grid;
 
-  grid-template-rows:1fr .5fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  // grid-template-rows:1fr .5fr;
+  // grid-template-columns repeat(auto-fill,minmax(200px,1fr));
+
 
   gap: 15px;
 
@@ -18,13 +20,13 @@ const Article = styled.article`
   padding:3ex;
 `;
 const ImgFeed = styled.img`
-  grid-column: 1/5;
+  // grid-column: 1/5;
   width: 100%;
   max-height: 300px;
   border-radius 25px;
 `;
 const Avatar = styled.img`  
-  grid-column: 1/2;
+  // grid-column: 1/2;
 
   width: 150px;
   height: 150px;
@@ -35,7 +37,7 @@ const Avatar = styled.img`
   transform: translateY(-50%);
 `;
 const ProfileInfo = styled.div`
-  grid-column: 2/4;
+  // grid-column: 2/4;
   align-self: start;
   width: 100%;
   height: 150px;

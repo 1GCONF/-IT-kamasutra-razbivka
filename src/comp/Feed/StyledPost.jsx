@@ -31,10 +31,8 @@ const Text = styled.p`
    margin-bottom 6px;
 `;
 
-const Likesbox=styled.ul`
-
-`;
-const LikesItem=styled.li`
+const Likesbox = styled.ul``;
+const LikesItem = styled.li`
   display:grid;
   grid-template-columns 30px 20px;
 `;
@@ -48,7 +46,7 @@ const LikesImg = styled.img`
     opacity .3;
   }
 `;
-const LikesCount=styled.p`
+const LikesCount = styled.p`
   color:white;
   justify-self start;
   align-self center;

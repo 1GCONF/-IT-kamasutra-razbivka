@@ -19,63 +19,7 @@ html body .main {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(0, 0, 9, 0.876);
 }
-html body .main .section_profile {
-  max-width: 1300px;
-  margin: 0 auto;
-  min-height: 100vh;
-  display: grid;
-  grid-template-areas: "header header header header " "navbar navbar content content " "navbar navbar post post " "footer footer footer footer ";
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 1ex;
-}
-html body .main .section_profile .header {
-  grid-area: header;
-  grid-column: 1/6;
-}
-html body .main .section_profile .nav {
-  grid-area: navbar;
-  grid-column: 1/2;
-}
-html body .main .section_profile .nav ul.nav-ul {
-  display: grid;
-  justify-content: center;
-  transform: perspective(500px) skewY(10deg);
-}
-html body .main .section_profile .nav ul.nav-ul li.nav-item {
-  justify-self: start;
-  padding: 10%;
-  width: 100%;
-  transform: perspective(50px) rotateY(10deg);
-  box-shadow: 0 4px 0 rgba(18, 18, 18, 0.7725490196);
-  text-align: center;
-  margin: 2.5ex;
-  border: 1px solid rgba(0, 0, 0, 0.352);
-  border-radius: 50%;
-  cursor: pointer;
-}
-html body .main .section_profile .nav ul.nav-ul li.nav-item:hover, html body .main .section_profile .nav ul.nav-ul li.nav-item:focus {
-  transform: perspective(50px) rotateY(10deg) translate(0, 4px);
-  box-shadow: 0 0 0 rgba(0, 0, 1, 0);
-}
-html body .main .section_profile .nav ul.nav-ul li.nav-item a.user-a {
-  padding: 3ex;
-  width: 100%;
-  text-transform: capitalize;
-  color: rgb(176, 156, 203);
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-shadow: 2px 3px 7px #00295c;
-}
-html body .main .section_profile .article_profile_content {
-  grid-area: content;
-  grid-column: 2/6;
-}
-html body .main .section_profile .posts {
-  grid-area: post;
-  grid-column: 2/6;
-}
 html body .main .section_profile .footer {
-  grid-column: 1/6;
   display: grid;
   align-items: center;
   text-align: center;
