@@ -23,6 +23,7 @@ const Textbox = styled.div`
   display grid;
   grid-template-rows:1fr .1fr;
   align-content space-between;
+
   // gap: 30px;
 `;
 const Text = styled.p`

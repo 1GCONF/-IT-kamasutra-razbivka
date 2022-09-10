@@ -1,6 +1,7 @@
 import React from "react";
 import Navitem from "./StyledNavitem";
 import styled from "styled-components";
+import { SectionNav } from "../StyledSectionNav";
 
 const Nav = styled.nav`
   display:grid;
@@ -14,19 +15,20 @@ const Nav = styled.nav`
 
 const Ul = styled.ul`
   display: grid;
+  gap 50px;
   justify-content: center;
   transform: perspective(500px) skewY(10deg);
 `;
 export default function StyledNav() {
   return (
     <Nav className="nav">
-      <Ul className="nav-ul">
-        <Navitem name="profile" />
-        <Navitem name="messages" />
-        <Navitem name="news" />
-        <Navitem name="music" />
-        <Navitem name="settings" />
-      </Ul>
-    </Nav>
+    <Ul className="nav-ul">
+      <Navitem name="profile" />
+      <Navitem name="messages" />
+      <Navitem name="news" />
+      <Navitem name="music" />
+      <Navitem name="settings" />
+    </Ul>
+  </Nav>
   );
 }

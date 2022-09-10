@@ -10,7 +10,7 @@ const Ul = styled.ul`
    justify-self center;
 `;
 
-export default function Feed() {
+export default function Posts() {
   return (
     <Ul className="posts">
       <StyledPost

@@ -6,8 +6,8 @@ const Article = styled.article`
   display: grid;
 
   grid-template-rows:1fr .5fr;
-  grid-template-columns repeat(auto-fill,minmax(200px,1fr));
-  
+  // grid-template-columns repeat(auto-fill,minmax(200px,1fr));
+
   gap: 15px;
 
   background-color: #282c34;
@@ -18,14 +18,11 @@ const Article = styled.article`
   padding:3ex;
 `;
 const ImgFeed = styled.img`
-  // grid-column: 1/5;
   width: 100%;
   max-height: 300px;
   border-radius 25px;
 `;
 const Avatar = styled.img`
-  // grid-column: 1/2;
-
   width: 150px;
   height: 150px;
   align-self: start;
@@ -35,7 +32,6 @@ const Avatar = styled.img`
   transform: translateY(-50%);
 `;
 const ProfileInfo = styled.div`
-  // grid-column: 2/4;
   align-self: start;
   width: 100%;
   height: 150px;
@@ -45,9 +41,12 @@ const ProfileInfo = styled.div`
   display: grid;
   align-content: space-between;
 `;
-
 const A = styled.a`
   color: white;
+  word-break: break-all;
+  &:hover{
+    opacity .3;
+  }
 `;
 export default function Content() {
   return (
