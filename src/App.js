@@ -1,19 +1,20 @@
 
-import Content from "./comp/Content";
-import StyledHeader from "./comp/Header/StyledHeader";
-import StyledNav from "./comp/StyledNav";
-import StyledFooter from "./comp/StyledFooter";
-import StyledPostContainer from "./comp/StyledPostContainer";
-import Dialogs from "./comp/Dialogs";
+import Profile from "./comp/Profile";
+import Header from "./comp/Header/StyledHeader";
+import Nav from "./comp/Nav/StyledNav";
+import Footer from "./comp/StyledFooter";
+import Dialogs from "./comp/StyledDialogs";
+import Feed from "./comp/Feed/Feed";
 function App() {
   return (
     <section className="section_profile">
-      <StyledHeader/>
-      <StyledNav />
-      <Content/>
-      <StyledPostContainer/>
+
+      <Header/>
+      <Nav />
+      <Profile/> 
+      <Feed/>
       <Dialogs/>
-      <StyledFooter/>
+      <Footer/>
 
     </section>
   );

@@ -1,6 +1,7 @@
 import React from "react";
-import Navitem from "./Navitem";
+import Navitem from "./StyledNavitem";
 import styled from "styled-components";
+
 const Nav = styled.nav`
   display:grid;
   align-content:start;
@@ -9,6 +10,7 @@ const Nav = styled.nav`
   background-color: rgba(0, 0, 9, 0.876);
   background transparent;
   boder-radius:50%;
+  width 100%;
 `;
 export default function StyledNav() {
   return (

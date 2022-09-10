@@ -1,14 +1,18 @@
 import styled from "styled-components";
 import StyledPost from "./StyledPost";
 const Ul = styled.ul`
-   background-color: #282c34;
+
    display grid;
   //  grid-template-columns 1fr 1fr 1fr 1fr;
    border-radius:25px;
+   background-color: #282c34;
+   border-radius:25px;
    box-shadow -0 2px 1px rgba(0, 0, 0, 0.1);
+   width:91%;
+   justify-self center;
 `;
 
-export default function StyledPostContainer() {
+export default function Feed() {
   return (
     <Ul className="posts">
       <StyledPost name='Dima' age='32' message='Hi, how are u?' likesCount='12'/>

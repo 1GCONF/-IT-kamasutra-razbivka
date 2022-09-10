@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 const Article = styled.article` 
-  padding:3ex;
+
   height: 100%;
   display: grid;
 
@@ -13,6 +13,9 @@ const Article = styled.article`
   background-color: #282c34;
   border-radius:25px;
   box-shadow -0 2px 1px rgba(0, 0, 0, 0.1);
+  width:91%;
+  justify-self center;
+  padding:3ex;
 `;
 const ImgFeed = styled.img`
   grid-column: 1/5;
