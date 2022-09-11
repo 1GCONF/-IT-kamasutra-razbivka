@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 import Profile from "./comp/Feed/Profile";
 import Header from "./comp/Header/StyledHeader";
 import Footer from "./comp/StyledFooter";
 import Dialogs from "./comp/Feed/StyledDialogs";
 import { StyledSectionFeed } from "./comp/Feed/StyledSectionFeed";
-import Posts from "./comp/Feed/Posts";
+import Posts from "./comp/Feed/Messages";
 import StyledNav from "./comp/Nav/StyledNav";
 
 const StyledMainContainer = styled.div`
@@ -20,20 +21,20 @@ const StyledMainContainer = styled.div`
 
 export default function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-
       <StyledMainContainer>
         <StyledNav />
 
         <StyledSectionFeed className="section_profile">
-          <Profile />
-          <Posts />
-          <Dialogs />
+          <Routes>
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/messagesт" element={<Posts />} />
+            <Route path="/dialogs" element={<Dialogs />} />
+          </Routes>
         </StyledSectionFeed>
       </StyledMainContainer>
-
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }

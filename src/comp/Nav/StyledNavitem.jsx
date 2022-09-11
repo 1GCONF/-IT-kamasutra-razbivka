@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 const NavItem = styled.li`
+  position:relative;
   width:60%;
   transform: perspective(50px) rotateY(10deg);
   box-shadow: 0 4px 0 #121212c5;
   text-align: center;
-  padding: 1ch;
+  padding: 3ch;
   margin: 2.5ex;
   border: 1px solid rgba(0, 0, 0, 0.352);
   border-radius: 50%;
@@ -56,6 +57,11 @@ const NavItem = styled.li`
   );
 `;
 const A = styled.a`
+  position: absolute;
+  top 50%;
+  left 50%;
+  transform translate(-50%,-50%);
+  width 100%;
   padding: 3ex;
   text-transform: capitalize;
   color: rgb(176, 156, 203);
