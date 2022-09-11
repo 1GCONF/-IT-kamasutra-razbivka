@@ -3,23 +3,31 @@ import Navitem from "./StyledNavitem";
 import styled from "styled-components";
 
 const Nav = styled.nav`
-height 100%;
+position:relative;
+  width:100%;
+  height 100%;
+  margin-bottom: 2vh;
+
   display:grid;
+  justify-content:center;
+  align-items:center;
   background:#1a1c22;
   background-color: #282c34;
   background-color: rgba(0, 0, 9, 0.876);
   background transparent;
   boder-radius:50%;
-  justify-items center;
+  // outline: 1px solid crimson;
+
 `;
 
 const Ul = styled.ul`
-  width:85%;
-  height 100%;
+  position:relative;
+  width:80%;
+  height 80%;
   display: grid;
   align-content space-evenly;
   gap 3ex;
-  transform: perspective(500px) skewY(10deg);
+  transform: perspective(500px) skewY(10deg) translateX(10%);
 `;
 export default function StyledNav() {
   return (

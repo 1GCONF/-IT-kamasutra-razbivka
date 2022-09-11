@@ -2,11 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const Header = styled.header`
+width: 80%;
+margin: 0 auto;
   display: grid;
   align-items: center;
   background:#1a1c22;
   box-shadow 4px 4px 2px rgba(3, 3, 19, 0.238);
   margin-bottom 2vh;
+  height:50px;
 `;
 const Logo = styled.a`
   width:100%;

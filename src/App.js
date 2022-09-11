@@ -14,9 +14,10 @@ const StyledMainContainer = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  border: 2px solid red;
+  border: 2px solid transparent;
+  min-height:calc(98vh - 150px);
 `;
 
 export default function App() {
@@ -29,11 +30,12 @@ export default function App() {
         <StyledSectionFeed className="section_profile">
           <Routes>
             <Route path="/profile" element={<Profile />} />
-            <Route path="/messagesт" element={<Posts />} />
+            <Route path="/messages" element={<Posts />} />
             <Route path="/dialogs" element={<Dialogs />} />
           </Routes>
         </StyledSectionFeed>
       </StyledMainContainer>
+
       <Footer />
     </BrowserRouter>
   );
