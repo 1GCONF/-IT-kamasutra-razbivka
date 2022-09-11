@@ -4,7 +4,6 @@ import styled from "styled-components";
 const Header = styled.header`
   display: grid;
   align-items: center;
-  grid-template-columns:1fr 1fr 1fr 1fr 1fr;
   background:#1a1c22;
   box-shadow 4px 4px 2px rgba(3, 3, 19, 0.238);
   margin-bottom 2vh;

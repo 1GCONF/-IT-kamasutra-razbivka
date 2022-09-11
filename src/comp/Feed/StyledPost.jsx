@@ -1,8 +1,7 @@
 import styled from "styled-components";
 const Post = styled.li`
    width 90%;  
-  margin 10px 0;
-  grid-column: 1/5;
+  // margin 10px 0;
   justify-self center;
   color: white;
   display grid;
