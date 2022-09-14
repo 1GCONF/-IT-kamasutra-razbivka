@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 const StyledDialogs = styled.article`
   width:100%;
   background-color: #282c34;
@@ -8,8 +8,11 @@ const StyledDialogs = styled.article`
   color:white;
   padding 3ex;
 `;
+const DialogItems = styled.ul``;
 export default function Dialogs() {
   return (
-    <StyledDialogs>Dialogs</StyledDialogs>
-  )
+    <StyledDialogs>
+      <DialogItems></DialogItems>
+    </StyledDialogs>
+  );
 }
