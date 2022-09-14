@@ -1,18 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 const Article = styled.article` 
+  width:100%;
   height: 100%;
   display: grid;
 
   grid-template-rows:1fr .5fr;
-  // grid-template-columns repeat(auto-fill,minmax(200px,1fr));
 
   gap: 15px;
 
   background-color: #282c34;
   border-radius:25px;
   box-shadow -0 2px 1px rgba(0, 0, 0, 0.1);
-  width:100%;
+
   padding:3ex;
 `;
 const ImgFeed = styled.img`

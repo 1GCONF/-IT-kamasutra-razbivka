@@ -11,13 +11,14 @@ import StyledNav from "./comp/Nav/StyledNav";
 
 const StyledMainContainer = styled.div`
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 5vh;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 2.5fr 7fr;
   justify-content: space-evenly;
   align-items: center;
   border: 2px solid transparent;
-  min-height:calc(98vh - 150px);
+  min-height: calc(98vh - 150px);
+  gap:3ex;
 `;
 
 export default function App() {
@@ -28,11 +29,14 @@ export default function App() {
         <StyledNav />
 
         <StyledSectionFeed className="section_profile">
-          <Routes>
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/messages" element={<Posts />} />
-            <Route path="/dialogs" element={<Dialogs />} />
-          </Routes>
+          <Profile />
+          {/* <Posts /> */}
+          {/* <Dialogs /> */}
+          {/* <Routes>
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/messages" element={<Posts />} />
+              <Route path="/dialogs" element={<Posts />} />
+            </Routes> */}
         </StyledSectionFeed>
       </StyledMainContainer>
 

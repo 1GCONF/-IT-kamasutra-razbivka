@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 const Footer = styled.footer`
+position:relative;
 width: 80%;
 margin: 0 auto;
 display: grid;

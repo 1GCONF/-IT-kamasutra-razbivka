@@ -1,82 +1,69 @@
 import React from "react";
 import styled from "styled-components";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Nav.css";
-// const NavItem = styled.li`
-  // position:relative;
-  // width:60%;
-  // transform: perspective(50px) rotateY(10deg);
-  // box-shadow: 0 4px 0 #121212c5;
-  // text-align: center;
-  // padding: 3ch;
-  // margin: 2.5ex;
-  // border: 1px solid rgba(0, 0, 0, 0.352);
-  // border-radius: 50%;
-  // cursor: pointer;
-  
-  // justify-self end;
-  // &:hover,
-  // &:focus {
-  //   transform: perspective(50px) rotateY(10deg) translate(-0, 4px);
-  //   box-shadow: 0 0 0 rgba(0, 0, 1, 0);
-  // }
-  // /* ff 3.6+ */
-  // background: -moz-linear-gradient(
-  //   90deg,
-  //   rgba(190, 10, 25, 0.85) 0%,
-  //   rgba(100, 0, 0, 0.96) 100%
-  // );
+const NavItem = styled.li`
+  transition: .3s ease;
+  width:calc(100% - 3ex);
+  height:75%;
+  transform: perspective(50px) rotateX(-15deg) skewX(-15deg);
+  box-shadow: -7.5px 8px 0 #121212c5;
+  border: 1px solid rgba(0, 0, 0, 0.352);
+  border-radius: 0 300px 0 0 ;
+  cursor: pointer;
+  justify-self: start;
+  &:hover,
+  &:focus {
+    transform: perspective(50px) rotateX(-15deg) skewX(-15deg) translate(-2.5px,4px);
+    box-shadow: 0 0 0 rgba(0, 0, 1, 0);
+  }
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(190, 10, 25, 0.85) 0%,
+    rgba(100, 0, 0, 0.96) 100%
+  );
 
-  // /* safari 5.1+,chrome 10+ */
-  // background: -webkit-linear-gradient(
-  //   90deg,
-  //   rgba(190, 10, 25, 0.85) 0%,
-  //   rgba(100, 0, 0, 0.96) 100%
-  // );
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(190, 10, 25, 0.85) 0%,
+    rgba(100, 0, 0, 0.96) 100%
+  );
 
-  // /* opera 11.10+ */
-  // background: -o-linear-gradient(
-  //   90deg,
-  //   rgba(190, 10, 25, 0.85) 0%,
-  //   rgba(100, 0, 0, 0.96) 100%
-  // );
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    90deg,
+    rgba(190, 10, 25, 0.85) 0%,
+    rgba(100, 0, 0, 0.96) 100%
+  );
 
-  // /* ie 6-9 */
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#640000', endColorstr='#BE0A19', GradientType=0 );
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#640000', endColorstr='#BE0A19', GradientType=0 );
 
-  // /* ie 10+ */
-  // background: -ms-linear-gradient(
-  //   90deg,
-  //   rgba(190, 10, 25, 0.85) 0%,
-  //   rgba(100, 0, 0, 0.96) 100%
-  // );
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    90deg,
+    rgba(190, 10, 25, 0.85) 0%,
+    rgba(100, 0, 0, 0.96) 100%
+  );
 
-  // /* global 94%+ browsers support */
-  // background: linear-gradient(
-  //   90deg,
-  //   rgba(190, 10, 25, 0.85) 0%,
-  //   rgba(100, 0, 0, 0.96) 100%
-  // );
-// `;
-// const A = styled.a`
-//   position: absolute;
-//   top 50%;
-//   left 50%;
-//   transform translate(-50%,-50%);
-//   width 100%;
-//   padding: 3ex;
-//   text-transform: capitalize;
-//   color: rgb(176, 156, 203);
-//   font-weight: 600;
-//   font-size: 0.9rem;
-//   text-shadow: 2px 3px 7px #00295c;
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    90deg,
+    rgba(190, 10, 25, 0.85) 0%,
+    rgba(100, 0, 0, 0.96) 100%
+  );
+  text-align: center;
+  display:grid;
+  // grid-template-rows:repeat(auto-fit,minmax(100px,1fr));
 // `;
 export default function Navitem(props) {
   return (
-    <li className="nav-item">
+    <NavItem className="nav-item">
       <NavLink className="nav-item-a" to={"/" + props.name}>
         {props.name}
       </NavLink>
-    </li>
+    </NavItem>
   );
 }
