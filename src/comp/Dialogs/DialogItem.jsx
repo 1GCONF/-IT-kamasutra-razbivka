@@ -1,9 +1,7 @@
 import styled from "styled-components"
-const DialogItem = styled.div`
-
-`;
+import { NavLink } from "react-router-dom";
 export default function Dialogs(props) {
   return (
-    <DialogItem>${props.name}</DialogItem>
+    <NavLink to="/id">{props.name} </NavLink>
   )
 }
