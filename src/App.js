@@ -6,6 +6,7 @@ import Footer from "./comp/StyledFooter";
 import { StyledSectionFeed } from "./comp/Feed/StyledSectionFeed";
 import StyledNav from "./comp/Nav/StyledNav";
 import Dialogs from "./comp/Dialogs/StyledDialogs";
+
 const StyledMainContainer = styled.div`
   width: 80%;
   margin: 0 auto 5vh;
@@ -28,7 +29,7 @@ export default function App() {
         <StyledSectionFeed className="section_profile">
           <Routes>
             <Route path="/profile" element={<Profile />} />
-            <Route path="/Messages" element={<Dialogs/>} />
+            <Route path="/dialogs" element={<Dialogs/>} />
           </Routes>
         </StyledSectionFeed>
       </StyledMainContainer>

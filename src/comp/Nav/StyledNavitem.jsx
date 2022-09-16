@@ -57,7 +57,7 @@ const NavItem = styled.li`
   text-align: center;
   display:grid;
   // grid-template-rows:repeat(auto-fit,minmax(100px,1fr));
-// `;
+ `;
 export default function Navitem(props) {
   return (
     <NavItem className="nav-item">

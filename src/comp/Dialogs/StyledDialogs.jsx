@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import DialogItem from "./DialogItem";
-import {Routes, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const StyledDialogs = styled.article`
   width:100%;
   background-color: #282c34;
@@ -12,22 +11,29 @@ const StyledDialogs = styled.article`
   &>h1{text-align: center;}
 `;
 const DialogItems = styled.ul``;
+const DialogItem = (props) => {
+  return (
+    <div className="dialog-item">
+      <NavLink id={props.id} name={props.name} to={"/dialogs/" + props.id}>
+        {props.name}
+      </NavLink>
+    </div>
+  );
+};
 export default function Dialogs() {
   return (
     <StyledDialogs>
       <h1>Dialogs</h1>
       <DialogItems>
-      <DialogItem name="Dimitry" />
-      <DialogItem name="Igor" />
-      <DialogItem name="Sveta" />
-      <DialogItem name="Lena" />
-        <Routes>
-          <Route path="/id" element={<DialogItem name="Dimitry" />} />
-          <Route path="/id" element={<DialogItem name="Igor" />} />
-          <Route path="/id" element={<DialogItem name="Sveta" />} />
-          <Route path="/id" element={<DialogItem name="Lena" />} />
-        </Routes>
+        <DialogItem id="1" name="Dymich"/>
+        <DialogItem id="2" name="Sveta" />
+        <DialogItem id="3" name="Lena" />
       </DialogItems>
+      <ul className="dialog-messages">
+        <li className="dialog-message">Hi</li>
+        <li className="dialog-message">Hi</li>
+        <li className="dialog-message">Hi</li>
+      </ul>
     </StyledDialogs>
   );
 }

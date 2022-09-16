@@ -2,8 +2,15 @@
   width: 100%;
   padding: 40px;
   text-transform: capitalize;
-  color: #b09ccb;
+  color: rgb(176, 156, 203);
   font-weight: 600;
   font-size: 21px;
   text-shadow: 2px 3px 7px #00295c;
+  text-align: center;
+  background-color: rgba(18, 18, 18, 0.1294117647);
 }
+.nav-item-a:active {
+  color: yellowgreen;
+}
+
+/*# sourceMappingURL=Nav.css.map */

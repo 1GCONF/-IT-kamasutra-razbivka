@@ -9,10 +9,17 @@ const Ul = styled.ul`
    box-shadow -0 2px 1px rgba(0, 0, 0, 0.1);
    justify-self center;
 `;
-
+const PostHeading = styled.h2`
+  text-align:center;
+`;
+const TextArea=styled.textarea`
+  border: 2px solid magenta;
+`;
 export default function Posts() {
   return (
     <Ul className="posts">
+      <PostHeading>My posts</PostHeading>
+      <TextArea/>
       <StyledPost
         name="Dima"
         age="32"
