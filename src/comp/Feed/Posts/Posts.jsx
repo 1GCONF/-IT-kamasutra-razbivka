@@ -59,7 +59,9 @@ const DATA_POSTS = [
   { name: "Sveta", age: 18, message: "Happy bday!", likesCount: 7 },
   { name: "Lena", age: 33, message: "Hey there congrats", likesCount: 0 },
 ];
-const postElements = DATA_POSTS.map((p,index)=> <StyledPost key={index} message={p.message} likesCount={p.likesCount}/>)
+const postElements = DATA_POSTS.map((p, index) => (
+  <StyledPost key={index} message={p.message} likesCount={p.likesCount} />
+));
 export default function Posts() {
   return (
     <Ul className="posts">
@@ -71,31 +73,6 @@ export default function Posts() {
       </InputSection>
 
       {postElements}
-
-      {/* <StyledPost
-        name="Dima"
-        age="32"
-        message="Hi, how are u?"
-        likesCount="12"
-      />
-      <StyledPost
-        name="Igor"
-        age="31"
-        message="Its my first post"
-        likesCount="7"
-      />
-      <StyledPost
-        name="Lena"
-        age="18"
-        message="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam quidem saepe facere, nihil hic sit minima soluta numquam eligendi animi nisi itaque alias quasi culpa?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam quidem saepe facere, nihil hic sit minima soluta numquam eligendi animi nisi itaque alias "
-        likesCount="28"
-      />
-      <StyledPost
-        name="Anita"
-        age="32"
-        message="Happy Birthday!"
-        likesCount="23"
-      /> */}
     </Ul>
   );
 }
