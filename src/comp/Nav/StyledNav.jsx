@@ -1,9 +1,7 @@
 import React from "react";
-// import Navitem from "./StyledNavitem";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
-import Dialogs from './../Dialogs/DialogItem';
 const Nav = styled.nav`
 position:relative;
   width:100%;

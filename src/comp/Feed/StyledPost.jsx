@@ -1,13 +1,13 @@
 import styled from "styled-components";
 const Post = styled.li`
    width 90%;  
-  // margin 10px 0;
+   margin: 0 auto;
   justify-self center;
   color: white;
   display grid;
   grid-template-columns .1fr 1fr;
   border-radius:25px;
-  // outline 1px solid;
+  outline 1px solid;
 `;
 const ImgAvatar = styled.img`
     margin: 15px 0;

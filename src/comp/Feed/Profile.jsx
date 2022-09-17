@@ -50,27 +50,26 @@ const A = styled.a`
 export default function Content() {
   return (
     <>
-        <Article className="article_profile_content">
-      <ImgFeed src="https://images.pexels.com/photos/12676278/pexels-photo-12676278.jpeg?auto=compress&cs=tinysrgb&w=1600" />
-      <Avatar
-        src="https://media.istockphoto.com/photos/businessman-silhouette-as-avatar-or-default-profile-picture-picture-id476085198?b=1&k=20&m=476085198&s=612x612&w=0&h=Ov2YWXw93vRJNKFtkoFjnVzjy_22VcLLXZIcAO25As4="
-        className="avatar"
-      ></Avatar>
-      <ProfileInfo>
-        <h2>Dmitriy K</h2>
-        <ul>
-          <li>Date of Birth: 2/1/1991</li>
-          <li>City:Minsk</li>
-          <li>Education: BSU 11</li>
-          <li>
-            Website link:{" "}
-            <A href="https://www.example.com">https://www.example.com</A>{" "}
-          </li>
-        </ul>
-      </ProfileInfo>
-    </Article>
-    <Posts/>
+      <Article className="article_profile_content">
+        <ImgFeed src="https://images.pexels.com/photos/12676278/pexels-photo-12676278.jpeg?auto=compress&cs=tinysrgb&w=1600" />
+        <Avatar
+          src="https://media.istockphoto.com/photos/businessman-silhouette-as-avatar-or-default-profile-picture-picture-id476085198?b=1&k=20&m=476085198&s=612x612&w=0&h=Ov2YWXw93vRJNKFtkoFjnVzjy_22VcLLXZIcAO25As4="
+          className="avatar"
+        ></Avatar>
+        <ProfileInfo>
+          <h2>Dmitriy K</h2>
+          <ul>
+            <li>Date of Birth: 2/1/1991</li>
+            <li>City:Minsk</li>
+            <li>Education: BSU 11</li>
+            <li>
+              Website link:{" "}
+              <A href="https://www.example.com">https://www.example.com</A>{" "}
+            </li>
+          </ul>
+        </ProfileInfo>
+      </Article>
+      <Posts />
     </>
-
   );
 }

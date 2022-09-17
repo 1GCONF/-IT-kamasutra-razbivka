@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Header = styled.header`
-width: 80%;
+width: 100%;
 margin: 0 auto;
   display: grid;
   align-items: center;
@@ -10,6 +10,7 @@ margin: 0 auto;
   box-shadow 4px 4px 2px rgba(3, 3, 19, 0.238);
   margin-bottom 2vh;
   height:50px;
+  border-radius:50px 0;
 `;
 const Logo = styled.a`
   width:100%;
