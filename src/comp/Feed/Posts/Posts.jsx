@@ -1,24 +1,5 @@
 import styled from "styled-components";
 import StyledPost from "./StyledPost";
-const POST = [
-  {id:1, name: "Dima", age: 32, message: "First post", likesCount: 12 },
-  {id:2, name: "Lena", age: 32, message: "Happy Birthday!", likesCount: 16 },
-  {id:3, name: "Igor", age: 28, message: "Third post", likesCount: 0 },
-  {id:4, name: "Val", age: 16, message: "Wassup homie", likesCount: 3 },
-];
-const Post = () => {
-  POST.map((post) => {
-    return (
-      <StyledPost
-        key={post.id}
-        name={post.name}
-        age={post.age}
-        message={post.message}
-        likesCount={post.likesCount}
-      />
-    );
-  });
-};
 const Ul = styled.ul`
     width:100%;
     height:100%;
@@ -72,15 +53,25 @@ const Button = styled.button`
     opacity: .3;
   }
 `;
+const DATA_POSTS = [
+  { name: "Igor", age: 31, message: "Its my first post", likesCount: 17 },
+  { name: "Dima", age: 25, message: "Hi WASSUP", likesCount: 3 },
+  { name: "Sveta", age: 18, message: "Happy bday!", likesCount: 7 },
+  { name: "Lena", age: 33, message: "Hey there congrats", likesCount: 0 },
+];
+const postElements = DATA_POSTS.map((p,index)=> <StyledPost key={index} message={p.message} likesCount={p.likesCount}/>)
 export default function Posts() {
   return (
     <Ul className="posts">
-      <PostHeading>My posts</PostHeading>
+      <PostHeading>Feed</PostHeading>
+
       <InputSection>
         <TextArea />
         <Button>Add Post</Button>
       </InputSection>
-      {Post()}
+
+      {postElements}
+
       {/* <StyledPost
         name="Dima"
         age="32"

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Routes, Route, BrowserRouter } from "react-router-dom";  
-import Profile from "./comp/Feed/Profile";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Profile from "./comp/Feed/Profile/Profile";
 import Header from "./comp/Header/StyledHeader";
 import Footer from "./comp/StyledFooter";
 import { StyledSectionFeed } from "./comp/Feed/StyledSectionFeed";
@@ -29,7 +29,7 @@ export default function App() {
         <StyledSectionFeed className="section_profile">
           <Routes>
             <Route path="/profile" element={<Profile />} />
-            <Route path="/dialogs/*" element={<Dialogs/>} />
+            <Route path="/dialogs/*" element={<Dialogs />} />
           </Routes>
         </StyledSectionFeed>
       </StyledMainContainer>

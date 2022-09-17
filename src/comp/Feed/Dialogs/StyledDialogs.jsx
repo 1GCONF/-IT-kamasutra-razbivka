@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+// import StyledPost from './../Profile/Posts/StyledPost';
 
 const StyledDialogs = styled.article`
   width:100%;
@@ -11,10 +12,11 @@ const StyledDialogs = styled.article`
   padding 3ex;
   &>h1{text-align: center;}
 `;
+
+/*                         1.                           */
 const DialogItemHeading = styled.h2`
   color: white;
 `;
-
 const DialogItems = styled.ul`
   & > .dialog-item {
     border-radius: 25%;
@@ -31,6 +33,11 @@ const DialogItems = styled.ul`
     }
   }
 `;
+const DIALOGS_DATA = [
+  { id: 1, name: "Dymich" },
+  { id: 2, name: "Sveta" },
+  { id: 3, name: "Igor" },
+];
 const DialogItem = (props) => {
   return (
     <li className="dialog-item">
@@ -40,53 +47,43 @@ const DialogItem = (props) => {
     </li>
   );
 };
+const dialogsElements = DIALOGS_DATA.map((dialog) => {
+  return (
+    <DialogItem
+      key={dialog.id}
+      className="dialog-item"
+      id={dialog.id}
+      name={dialog.name}
+    />
+  );
+});
+
+/*                         2.                           */
+
 const DialogMessages = styled.ul``;
-const DialogMessage = styled.li`
-  color: white;
-`;
-const PERSONS = [
-  { id: 1, name: "Dymich", message: "hi, my first post" },
-  { id: 2, name: "Sveta", message: "Happy bday!" },
-  { id: 3, name: "Lena", message: "Hey u look good here" },
-];
-const MESSAGES = [
+const DATA_MESSAGES = [
   { id: 1, messageContent: "hi, my first post" },
   { id: 2, messageContent: "Happy bday!" },
   { id: 3, messageContent: "Hey u look good here" },
 ];
+const DialogMessage = (props) => {
+  return (
+    <li className="dialog-message-item" message={props.message}>
+      {props.message}
+    </li>
+  );
+};
+const messagesElements = DATA_MESSAGES.map((m) => (
+  <DialogMessage key={m.id} message={m.messageContent} />
+));
 export default function Dialogs() {
   return (
     <StyledDialogs>
       <DialogItemHeading>Dialogs</DialogItemHeading>
 
-      <DialogItems>
-        {PERSONS.map((person) => {
-          return (
-            <DialogItem
-              key={person.id}
-              className="dialog-item"
-              id={person.id}
-              name={person.name}
-            />
-          );
-        })}
-      </DialogItems>
+      <DialogItems>{dialogsElements}</DialogItems>
 
-      <DialogMessages>
-        {MESSAGES.map((message) => {
-          return (
-            <DialogMessage key={message.id} className="dialog-message">
-              {message.messageContent}
-            </DialogMessage>
-          );
-        })}
-      </DialogMessages>
-
-      {/* <DialogMessages>
-        <DialogMessage messageContent="hi, my first post" />
-        <DialogMessage messageContent="Happy bday!" />
-        <DialogMessage messageContent="Hey u look good here" />
-      </DialogMessages> */}
+      <DialogMessages>{messagesElements}</DialogMessages>
     </StyledDialogs>
   );
 }

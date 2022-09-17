@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Posts from "./Posts";
+import Posts from "../Posts/Posts";
 const Article = styled.article` 
   width:100%;
   height: 100%;
@@ -69,7 +69,7 @@ export default function Content() {
           </ul>
         </ProfileInfo>
       </Article>
-      <Posts />
+      <Posts/>
     </>
   );
 }

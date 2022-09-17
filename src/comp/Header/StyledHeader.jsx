@@ -32,8 +32,8 @@ const LogoImg=styled.img`
 export default function StyledHeader() {
   return (
     <Header className="header">
-      <Logo href="#">
-        <LogoImg id="header-logo" src="header-logo.png" alt="Company Logo" />
+      <Logo href="./">
+        <LogoImg id="header-logo" src="./header-logo.png" alt="Company Logo" />
       </Logo>
     </Header>
   );

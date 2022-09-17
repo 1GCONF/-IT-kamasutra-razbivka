@@ -53,6 +53,7 @@ const LikesCount = styled.p`
   font-size .8rem;
   margin-bottom:4px;
 `;
+
 export default function StyledPost(props) {
   return (
     <Post>
@@ -72,3 +73,23 @@ export default function StyledPost(props) {
     </Post>
   );
 }
+
+// export default function StyledPost(props) {
+//   return (
+//     <Post>
+//       <ImgAvatar
+//         src="https://media.istockphoto.com/photos/businessman-silhouette-as-avatar-or-default-profile-picture-picture-id476085198?b=1&k=20&m=476085198&s=612x612&w=0&h=Ov2YWXw93vRJNKFtkoFjnVzjy_22VcLLXZIcAO25As4="
+//         alt="avatar"
+//       />
+//       <Textbox>
+//         <Text>{props.message}</Text>
+//         <Likesbox>
+//           <LikesItem>
+//             <LikesImg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_TMW1Pb_xYYMFxYeP0n07diucIvwD6Rm2Ww&usqp=CAU" />
+//             <LikesCount>{props.likesCount}</LikesCount>
+//           </LikesItem>
+//         </Likesbox>
+//       </Textbox>
+//     </Post>
+//   );
+// }
